@@ -14,3 +14,11 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
+.light-theme{
+    background-color: whitesmoke;
+}
+
+.dark-theme{
+    background-color: #111b20;
+}

@@ -30,8 +30,7 @@ export default makeStyles((theme) => ({
     width: '50%',
     padding: '3%',
     borderRadius: 10,
-    color: 'white',
-    backgroundColor: 'rgba(21, 101, 192)',
+    backgroundColor: '#C7EEFF',
     margin: '0 12px',
     textAlign: 'center',
     height: '25vmin',
@@ -73,4 +72,19 @@ export default makeStyles((theme) => ({
       height: '35vmin',
     },
   },
+  darkModeButton: {
+    border: 'none',
+    backgroundColor: '#C7EEFF',
+    height : '50px',
+    width: '50px',
+    borderRadius: '50%',
+    position: 'fixed',
+    bottom: '50px',
+    left: '20px',
+  },
+  darkModeImage: {
+    height : '100%',
+    width: '100%',
+    borderRadius: '50%'
+  }
 }));

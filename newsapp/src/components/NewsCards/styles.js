@@ -21,5 +21,8 @@ export default makeStyles({
         display: 'flex',
         flexDirection: 'column',
         textAlign: 'center'
+    },
+    textcolor: {
+        color: 'black',
     }
 });

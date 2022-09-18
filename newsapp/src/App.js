@@ -3,12 +3,27 @@ import { Typography } from '@material-ui/core';
 import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
+import logo from './images/logo.jpeg'
+
 import { NewsCards } from './components';
 import useStyles from './styles';
 
 const App = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
+  const [theme, setTheme] = useState("light-theme");
+
+  const toggleTheme = () => {
+    if(theme === "light-theme"){
+      setTheme("dark-theme")
+    }else{
+      setTheme("light-theme")
+    }
+  }
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   const classes = useStyles();
 
@@ -43,23 +58,25 @@ const App = () => {
       <div className={classes.logoContainer}>
         {newsArticles.length ? (
           <div className={classes.infoContainer}>
-            <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Open article number [4]</Typography></div>
-            <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
+            <div className={classes.card}><Typography variant="h5" component="h2" className={classes.textcolor}>Try saying: <br /><br />Open article number [4]</Typography></div>
+            <div className={classes.card}><Typography variant="h5" component="h2" className={classes.textcolor}>Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-
+         <img src={logo} className={classes.alanLogo} alt="logo" />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       {!newsArticles.length ? (
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
             Created by
-            <a className={classes.link} href="https://github.com/MrUnAnonymous"> Saurabh Sapkal</a> -
+            <a className={classes.link} href="https://github.com/MrUnAnonymous"> Saurabh Sapkal</a>
           </Typography>
         </div>
       ) : null}
+      <button className={classes.darkModeButton} onClick={() => toggleTheme()}>
+        <img className={classes.darkModeImage} src="https://img.icons8.com/external-regular-kawalan-studio/100/000000/external-dark-mode-user-interface-regular-kawalan-studio.png"alt='Dark Mode Button' />
+      </button>
     </div>
   );
 };
-
 export default App;
