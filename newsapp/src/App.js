@@ -4,6 +4,7 @@ import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 import logo from './images/logo.jpeg'
+//import Toggle from 'react-toggle'
 
 import { NewsCards } from './components';
 import useStyles from './styles';
@@ -58,7 +59,6 @@ const App = () => {
       <div className={classes.logoContainer}>
         {newsArticles.length ? (
           <div className={classes.infoContainer}>
-            <div className={classes.card}><Typography variant="h5" component="h2" className={classes.textcolor}>Try saying: <br /><br />Open article number [4]</Typography></div>
             <div className={classes.card}><Typography variant="h5" component="h2" className={classes.textcolor}>Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}

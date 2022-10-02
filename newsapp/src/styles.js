@@ -45,6 +45,7 @@ export default makeStyles((theme) => ({
     },
   },
   infoContainer: {
+    width: "50%",
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',

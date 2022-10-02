@@ -12,7 +12,7 @@ export default makeStyles({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        height: '40vh',
+        height: '100vh',
         padding: '10%',
         borderRadius: 10,
         color: 'white'
@@ -20,9 +20,13 @@ export default makeStyles({
     infoCard: {
         display: 'flex',
         flexDirection: 'column',
-        textAlign: 'center'
+        textAlign: 'center',
+        height: "400px",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
     },
     textcolor: {
+        fontSize: "1em",
         color: 'black',
     }
 });
